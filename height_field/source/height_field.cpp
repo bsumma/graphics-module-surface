@@ -192,6 +192,16 @@ void init(){
   for(unsigned int i=0; i < _TOTAL_IMAGES; i++){
     heightfield.push_back((source_path + files[i]).c_str());
 
+    // match normal array size of vertices
+    if (heightfield[i].normals.size() < heightfield[i].vertices.size()) {
+      unsigned int oldsize = heightfield[i].normals.size();
+      unsigned int newsize = heightfield[i].vertices.size();
+      heightfield[i].normals.resize(newsize);
+      for (unsigned int j = oldsize; j < newsize; ++j) {
+        heightfield[i].normals[j] = vec3(0.f,-1.f,0.f);
+      }
+    }
+
     glBindVertexArray( vao[i] );
     glBindBuffer( GL_ARRAY_BUFFER, buffer[i] );
     unsigned int vertices_bytes = heightfield[i].vertices.size()*sizeof(vec4);

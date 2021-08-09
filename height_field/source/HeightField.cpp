@@ -41,7 +41,7 @@ void HeightField::createMesh(){
   
 //TODO
 //Compute a triangle's normal
-vec4 HeightField::trangleNormal(vec4 p1, vec4 p2, vec4 p3){
+vec4 HeightField::triangleNormal(vec4 p1, vec4 p2, vec4 p3){
 
   /* TODO replace: */return vec4();
 

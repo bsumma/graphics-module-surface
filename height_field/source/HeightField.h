@@ -30,7 +30,7 @@ public:
   bool loadImage(const char * path);
   
   void createMesh();
-  vec4 trangleNormal(vec4 p1, vec4 p2, vec4 p3);
+  vec4 triangleNormal(vec4 p1, vec4 p2, vec4 p3);
   void createNormals();
 
   

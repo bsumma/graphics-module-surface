@@ -36,6 +36,8 @@ add_executable(height_field WIN32 MACOSX_BUNDLE
 	source/common/SourcePath.h
 	source/common/Trackball.cpp
 	source/common/Trackball.h
+	source/common/u8names.cpp
+	source/common/u8names.h
 	source/common/vec.h
 	shaders/fshader.glsl
     shaders/vshader.glsl)
